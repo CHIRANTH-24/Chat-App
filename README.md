@@ -49,3 +49,10 @@ This chat application leverages the MERN stack (MongoDB, Express, React, Node.js
 - **Real-Time Communication: Socket.io**
   - **WebSockets:** Enables real-time bidirectional communication between the client and server.
   - **Event Handling:** Custom events for sending and receiving messages, joining chat rooms, and more.
+
+![Login Page](image.png)
+![Frontend](image-1.png)
+![Backend](image-2.png)
+![File Structure](image-3.png)
+![API Testing](image-4.png)
+![Database](image-5.png)
