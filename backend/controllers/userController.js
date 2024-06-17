@@ -39,12 +39,13 @@ const registerUser = expressAsyncHandler(async (req, res) => {
 
 const authUser = expressAsyncHandler(async (req, res) => {
   const { email, password } = req.body;
-  
+
   //find user in database with email
   const user = await User.findOne({ email });
-  
-  if (user && (await(user.matchPassword(password)))) { //if user exits and password matches then
-    res.status(201).json({
+
+  if (user && (await user.matchPassword(password))) {
+    //if user exits and password matches then
+    res.json({
       _id: user._id,
       name: user.name,
       email: user.email,
@@ -57,5 +58,4 @@ const authUser = expressAsyncHandler(async (req, res) => {
   }
 });
 
-
-module.exports = { registerUser , authUser };
+module.exports = { registerUser, authUser };
